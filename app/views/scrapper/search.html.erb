@@ -1,0 +1,16 @@
+<h2>Search</h2>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+		<%= form_tag("/result", method: "post") do %>
+		  <%= text_field_tag(:brand) %>
+		  <%= submit_tag("Search", class: 'btn btn-info') %>
+		<% end %>
+<!-- 
+		<br><br>
+
+    <form action="/result" method="post">
+      <input type="text" name="" id="brand">
+      <button class="btn btn-info" type="submit">Search</button>
+    </form> -->
+  </div>
+</div>

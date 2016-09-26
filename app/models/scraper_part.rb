@@ -1,0 +1,2 @@
+class ScraperPart < ApplicationRecord
+end
