@@ -1,17 +1,18 @@
 class ScraperBrand < ApplicationRecord
+  has_many :scraper_models
 
-  def create
-    @brand = ScraperBrand.new(brand_params)
-  end
+    def create
+      @brand = ScraperBrand.new(brand_params)
+    end
 
-  def update
-    @brand = ScraperBrand.find(params[:id])
-    @brand.update
-  end
+    def update
+      @brand = ScraperBrand.find(params[:id])
+      @brand.update
+    end
 
-  private
-  def brand_params
-    params.require(:scraper_brand).permit(:name, :url)
-  end
+    private
+    def brand_params
+      params.require(:scraper_brand).permit(:name, :url)
+    end
 
 end
