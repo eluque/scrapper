@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-12 text-center box-models">
+    <h1><%= @brand.name.titleize %></h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 box-show">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <% @bmodels.each do |mod| %>
+            <h2><%= mod.name %></h2>
+            <ul>
+              <% ScraperYear.where(scraper_model_id: mod.id).each do |year| %>
+                <li><%= link_to year.name, scraper_parts_path(year.id) %></li>
+              <% end %>
+            </ul>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4 text-center">
+            <%= link_to 'Back', root_path %>
+        </div>
+      </div>
+
+  </div>
+</div>

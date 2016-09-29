@@ -83,7 +83,6 @@ class Scrapper < ApplicationRecord
 
                  begin
                    get_type = /-(\d+)-*(([0-9]{5}|[0-9]{1})?)-*.html$/.match(get_type.last.gsub('%26gt%3B', ''))[1]
-                       # /-(\d+)-*(([0-9]{5}|[0-9]{1})?)-*.html$/.match(variable)[1]
                  rescue
                    puts get_type
                  end
@@ -121,7 +120,6 @@ class Scrapper < ApplicationRecord
 
           for i in 0..(link_piece.length - 1)
             piece_url = link_piece[i].attributes['href'].value
-             # binding.pry
 
             page = agent.get(piece_url)
 
@@ -131,33 +129,11 @@ class Scrapper < ApplicationRecord
             data[get_data_name] = get_data_price
 
             if ScraperPart.find_by(name: get_data_name).nil?
-              puts "#{get_data_name} - #{get_data_price} - #{id}"
+              # puts "#{get_data_name} - #{get_data_price} - #{id}"
               ScraperPart.create({name: get_data_name, price: get_data_price, scraper_year_id: id})
             end
           end
       # binding.pry
         end
-
       end
-
 end
-#   array_ano = []
-#   link_by_type.each do |year, link|
-#     getYear = year
-#     url = link
-#
-#     page = agent.get("https://www.autorecambiosmadridsur.es/recambiosmadridsur/c191403/alfa-145-1999-.html")
-#
-#     links_of_model = page.css('div#productos-nombre a')
-#     # link_piece = links_of_model.each_slice(1).map(&:first)
-#     binding.pry
-#     #
-#     for i in 0..(link_piece.length - 1)
-#     piece_name = link_piece[i].text
-#     array_ano.push(piece_name)
-#     # binding.pry
-#     end
-#     binding.pry
-#   end
-#
-# end

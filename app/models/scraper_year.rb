@@ -2,6 +2,16 @@ class ScraperYear < ApplicationRecord
   has_many :scraper_parts
   belongs_to :scraper_model
 
+
+    def self.search_year(search)
+      if search
+        where('name LIKE ?', "%#{search}%")
+        # find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+      else
+        @year = ScraperYear.all
+      end
+    end
+
     def create
       @year = ScraperYear.new(year_params)
     end

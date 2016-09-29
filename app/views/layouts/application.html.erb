@@ -6,9 +6,71 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Lalezar" rel="stylesheet">
   </head>
 
   <body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Brand</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="row">
+    <div class="col-md-12 images-autoparts">
+        <ul>
+          <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Logo_of_Advance_Auto_Parts.svg/2000px-Logo_of_Advance_Auto_Parts.svg.png" alt="" width="300" height="100"/></li>
+          <li><img src="https://image.jimcdn.com/app/cms/image/transf/none/path/s8f338341de41e421/image/ib95c42cdb12883b1/version/1439655059/image.png" alt="" width="300" height="100"/></li>
+          <li><img src="http://marketing.autoplast.net/template/images/logo.png" alt="" width="300" height="100"/></li>
+          <li><img src="http://www.igf-autopartes.com/store/skin/frontend/default/theme168k/images/logo.png" alt="" width="300" height="100"/></li>
+
+        </ul>
+    </div>
+  </div>
+
+
     <%= yield %>
+
+  <footer>
+
+    <div class="row">
+      <div class="col-md-12 images-autoparts">
+          <ul>
+            <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Logo_of_Advance_Auto_Parts.svg/2000px-Logo_of_Advance_Auto_Parts.svg.png" alt="" width="200" height="70"/></li>
+            <li><img src="https://image.jimcdn.com/app/cms/image/transf/none/path/s8f338341de41e421/image/ib95c42cdb12883b1/version/1439655059/image.png" alt="" width="200" height="70"/></li>
+            <li><img src="http://marketing.autoplast.net/template/images/logo.png" alt="" width="200" height="70"/></li>
+            <li><img src="http://www.igf-autopartes.com/store/skin/frontend/default/theme168k/images/logo.png" alt="" width="300" height="100"/></li>
+          </ul>
+      </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   </body>
 </html>

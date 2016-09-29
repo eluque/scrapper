@@ -18,3 +18,88 @@
 @import "bootstrap";
 @import "bootswatch/cerulean/variables";
 @import "bootswatch/cerulean/bootswatch";
+
+
+.navbar-default{
+  margin: 0;
+}
+
+.images-autoparts{
+  height: 25vh;
+  background-image: url('http://i.stack.imgur.com/pMAiU.jpg');
+}
+
+.images-autoparts ul>li{
+  display: inline-block;
+  padding: 70px;
+}
+
+// .title-brand {
+//   height: 70vh;
+//   background-image: url('http://i.stack.imgur.com/pMAiU.jpg');
+// }
+
+.title-brand h1 {
+  padding: 70px 0;
+}
+
+.btn-search{
+  margin: 20px;
+}
+
+.center-box{
+  background-color: #ccc;
+  // display: inline-block;
+  padding: 70px;
+}
+
+.center-box li{
+  text-decoration: none;
+  list-style: none;
+  font-size: 20px;
+}
+
+.center-box li a{
+  text-decoration: none;
+}
+
+.box-models{
+  height: 20vh;
+  background-color: #B0C4DE;
+}
+
+.box-models h1{
+  font-size: 70px;
+  color: #fff;
+}
+
+.box-show{
+  margin: 20px;
+  font-size: 2em;
+  // height: 50vh;
+}
+
+.box-show li{
+  list-style: none;
+}
+
+.box-show li a{
+  text-decoration: none;
+}
+
+.table-parts{
+  margin: 20px;
+
+}
+
+.link{
+  margin: 20px;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  background-image: url('http://i.stack.imgur.com/pMAiU.jpg');
+  height: 100px;
+  // margin: 20px 0 0 0;
+}
